@@ -1,0 +1,78 @@
+###
+// Create User
+POST http://localhost:5000/Users
+Content-Type: application/json
+
+{
+    "id": "101",
+    "email": "alviano@gmail.com",
+    "gender": "male",
+    "password": "password123",
+    "confpassword": "password123",
+    "role": "developer"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/Users
+
+###
+// Get All Users With Pagination
+GET http://localhost:5000/Users?offset=10&limit=10
+
+###
+// Get User By ID
+GET http://localhost:5000/Users/101
+
+###
+// Update User By ID
+PATCH http://localhost:5000/Users/101
+Content-Type: application/json
+
+{
+    "email": "alvianoricky@gmail.com",
+    "role": "FullStack Developer"
+}
+
+###
+//Delete Users By ID
+DELETE http://localhost:5000/Users/101
+
+###
+// Get All Movies
+GET http://localhost:5000/Movies
+
+###
+// Get All Movies With Pagination
+GET http://localhost:5000/Movies?offset=10&limit=10
+
+###
+// Get Movie By ID
+GET http://localhost:5000/Movies/101
+
+###
+// Add Movie
+POST http://localhost:5000/Movies
+Content-Type: application/json
+
+{
+      "id": 101,
+      "title": "DummyMovie2",
+      "genres": "Dummmy2",
+      "year": 2023
+}
+
+###
+// Update Movie By ID
+PATCH http://localhost:5000/Movies/101
+Content-Type: application/json
+
+{
+    "id":"",
+      "title": "DummyMovie",
+      "genres": "Dummmy"
+}
+
+###
+//Delete Movie By ID
+DELETE http://localhost:5000/Movies/101
